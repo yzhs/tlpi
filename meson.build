@@ -7,3 +7,4 @@ executable('copy-content', 'cp/copy_file_content.c')
 # Chapter 6
 executable('large_file', 'fileio/large_file.c')
 executable('append_seek', 'fileio/append_seek.c')
+executable('atomic_append', 'fileio/atomic_append.c')
