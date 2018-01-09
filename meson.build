@@ -1,4 +1,8 @@
 project('tlpi', 'c', default_options: ['c_std=c11'])
 
+# Chapter 5
 executable('tee', 'tee/tee.c')
 executable('copy-content', 'cp/copy_file_content.c')
+
+# Chapter 6
+executable('large_file', 'fileio/large_file.c')
