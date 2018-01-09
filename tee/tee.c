@@ -25,7 +25,7 @@ main(int argc, char *argv[])
 				append = true;
 				break;
 			default:
-				err(1, "Usage: %s [-a] [FILE]...", argv[0]);
+				errx(1, "Usage: %s [-a] [FILE]...", argv[0]);
 		}
 	}
 	argc -= optind;
@@ -43,7 +43,7 @@ main(int argc, char *argv[])
 	files[0] = 1; // stdout
 	for (int i = 0; i < nfiles; ++i) {
 		if (-1 == (files[i+1] = open(argv[i], flags, 0644))) {
-			err(1, "Failed to open file %s for writing: %s", argv[i], strerror(errno));
+			err(1, "Failed to open file '%s' for writing", argv[i]);
 		}
 	}
 
@@ -54,19 +54,19 @@ main(int argc, char *argv[])
 			while (remaining) {
 				ssize_t bytes_written;
 				if (-1 == (bytes_written = write(files[i], buf, (size_t)len))) {
-					err(1, "Failed to write to file number %d: %s", i, strerror(errno));
+					err(1, "Failed to write to file number '%d'", i);
 				}
 				remaining -= (size_t)bytes_written;
 			}
 		}
 	}
 	if (len == -1) {
-		err(1, "Failed to write to file: %s", strerror(errno));
+		err(1, "Failed to write to file");
 	}
 
 	for (int i = 1; i < nfiles; ++i) {
 		if (-1 == close(files[i])) {
-			err(1, "Failed to close file %s: %s", argv[i], strerror(errno));
+			err(1, "Failed to close file '%s'", argv[i]);
 		}
 	}
 
