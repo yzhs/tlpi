@@ -10,3 +10,6 @@ executable('append_seek', 'fileio/append_seek.c')
 executable('atomic_append', 'fileio/atomic_append.c')
 executable('dup', 'fileio/dup.c')
 executable('dup_fd_offset', 'fileio/dup_fd_offset.c')
+
+# Chapter 7
+executable('env', 'processes/env.c')
