@@ -13,3 +13,9 @@ executable('dup_fd_offset', 'fileio/dup_fd_offset.c')
 
 # Chapter 7
 executable('env', 'processes/env.c')
+
+# Chapter 8
+#executable('malloc', 'memory/malloc.c') # TODO implement malloc and free
+
+# Chapter 9
+executable('getpwnam', 'users/getpwnam.c')
