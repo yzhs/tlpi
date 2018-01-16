@@ -30,3 +30,6 @@ executable('uid', 'processes/uid.c')
 # Chapter 24
 # Close a file descriptor in a vfork()ed child, still open in parent
 executable('vfork_close', 'fork/vfork_close.c')
+
+# Chapter 25
+executable('exit_status', 'fork/exit_status.c')
