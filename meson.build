@@ -23,3 +23,10 @@ executable('getpwnam', 'users/getpwnam.c')
 
 # Chapter 10
 executable('uid', 'processes/uid.c')
+#executable('groups', 'processes/groups.c') # TODO implement initgroups() and setgroups()
+
+
+
+# Chapter 24
+# Close a file descriptor in a vfork()ed child, still open in parent
+executable('vfork_close', 'fork/vfork_close.c')
