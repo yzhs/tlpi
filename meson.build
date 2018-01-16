@@ -33,3 +33,6 @@ executable('vfork_close', 'processes/vfork_close.c')
 
 # Chapter 25
 executable('exit_status', 'processes/exit_status.c')
+
+# Chapter 26
+executable('reparent_orphan', 'processes/reparent_orphan.c')
