@@ -20,3 +20,6 @@ executable('env', 'processes/env.c')
 
 # Chapter 9
 executable('getpwnam', 'users/getpwnam.c')
+
+# Chapter 10
+executable('uid', 'processes/uid.c')
