@@ -37,7 +37,7 @@ main(int argc, char *argv[])
 
 	char buf[BUF_SIZE];
 	ssize_t len;
-	bool ends_with_hole;
+	bool ends_with_hole = false;
 	while (0 < (len = read(source, buf, sizeof(buf)))) {
 		if (is_zero(buf, len)) {
 			if (-1 == lseek(dest, len, SEEK_CUR)) {
