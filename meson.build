@@ -1,4 +1,5 @@
-project('tlpi', 'c', default_options: ['c_std=c11'])
+project('tlpi', 'c', default_options:
+    ['c_std=c11', 'warning_level=3', 'werror=true'])
 
 # Chapter 5
 executable('tee', 'tee/tee.c')
